@@ -407,10 +407,130 @@ main {
     font-size: 0.95rem;
 }
 
+.event-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
 
+.event-item:hover{
+    border-color: var(--primary);
+}
 
+.event-calendar{
+    min-width: 80px;
+    height: 80px;
+    background-color: rgba(99,102,241,0.2);
+    color: var(--primary);
+    border: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-/*RESPONSIVIDADE*/
+.day{
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.month{
+    font-size: 0.85;
+    font-weight: 600;
+}
+
+.event-text h4{
+    font-size: 1.1 rem;
+    margin-bottom: 8px;
+}
+
+.event-meta{
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-layout{
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.contact-info h2{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p{
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-list li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-list i{
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.contact-form{
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--primary);
+}
+
+.input-group{
+    margin-bottom: 24px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input, .input-group textarea{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.input-group input:focus, .input-group textarea:focus{
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
 @media(max-width : 768px) {
 
     /*Mostra o ícone Menu mobile*/
