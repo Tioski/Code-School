@@ -107,4 +107,30 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(counterItem);
     });
 
+//Dark-Mode e Light-Mode
+
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeBtn.querySelector('i');
+
+    const currentTheme = localStorage.getItem('theme')
+    if (currentTheme === 'dark'){
+        document.body.classList.add('dark-mode');
+        themeIcon.classList.replace('ph-moon','ph-sun')
+    }
+
+
+    themeBtn.addEventListener('click',()=> {
+     document.body.classList.toggle('dark-mode');
+
+     const isDark = document.body.classList.contains('dark-mode')
+
+        if (isDark){
+            themeIcon.classList.replace('ph-moon','ph-sun');
+            localStorage.setItem('theme','dark')
+        } else {
+            themeIcon.classList.replace('ph-sun','ph-moon');
+            localStorage.setItem('theme','light')
+        }
+    });
+
 });
